@@ -1,16 +1,23 @@
 // @ts-check
 const eslint = require('@eslint/js');
 const { defineConfig } = require('eslint/config');
-const tseslint = require('typescript-eslint');
+const tsEslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 
 module.exports = defineConfig([
   {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  },
+  {
     files: ['**/*.ts'],
     extends: [
       eslint.configs.recommended,
-      tseslint.configs.recommended,
-      tseslint.configs.stylistic,
+      tsEslint.configs.strictTypeChecked,
+      tsEslint.configs.stylisticTypeChecked,
       angular.configs.tsRecommended,
     ],
     processor: angular.processInlineTemplates,
@@ -31,6 +38,8 @@ module.exports = defineConfig([
           style: 'kebab-case',
         },
       ],
+      '@typescript-eslint/no-extraneous-class': 'off',
+      '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
     },
   },
   {
