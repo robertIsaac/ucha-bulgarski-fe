@@ -10,7 +10,8 @@
     "serve:ssr:ucha-bulgarski-fe": "node dist/ucha-bulgarski-fe/server/server.mjs",
     "format": "prettier . -wl",
     "check-format": "prettier . -c",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "lint-fix": "ng lint --fix"
   },
   "private": true,
   "packageManager": "npm@10.9.2",
