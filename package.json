@@ -9,7 +9,9 @@
     "test": "ng test",
     "serve:ssr:ucha-bulgarski-fe": "node dist/ucha-bulgarski-fe/server/server.mjs",
     "format": "prettier . -wl",
-    "check-format": "prettier . -c"
+    "check-format": "prettier . -c",
+    "lint": "ng lint",
+    "lint-fix": "ng lint --fix"
   },
   "private": true,
   "packageManager": "npm@10.9.2",
@@ -33,9 +35,12 @@
     "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "angular-eslint": "21.0.1",
+    "eslint": "^9.39.1",
     "jsdom": "^27.1.0",
     "prettier": "3.7.4",
     "typescript": "~5.9.2",
+    "typescript-eslint": "8.46.4",
     "vitest": "^4.0.8"
   }
 }
